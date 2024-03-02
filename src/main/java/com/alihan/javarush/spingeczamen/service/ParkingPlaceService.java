@@ -1,18 +1,16 @@
 package com.alihan.javarush.spingeczamen.service;
 
-import com.alihan.javarush.spingeczamen.entity.ParkingPeople;
 import com.alihan.javarush.spingeczamen.entity.ParkingPlace;
-import jakarta.persistence.criteria.CriteriaBuilder;
 
 import java.util.List;
 
 public interface ParkingPlaceService {
-    ParkingPeople createParkingPeople (ParkingPeople parkingPeople,
-                                       String carNumber, String name,
-                                       String surname, String phoneNumber);
-    ParkingPeople getParkingPeopleByPlace (ParkingPlace parkingPlace);
-    ParkingPeople updateParkingPeople (ParkingPeople parkingPeople);
+    ParkingPlace createParkingPeople (ParkingPlace parkingPlace);
+    List<ParkingPlace> getParkingPeopleByPlace (ParkingPlace parkingPlace);
+    ParkingPlace updateParkingPeople (ParkingPlace parkingPlace);
     List<ParkingPlace> allFreePlaces (ParkingPlace parkingPlace);
-    void deleteParkingPeople (ParkingPeople parkingPeople);
+    void deleteParkingPeople (ParkingPlace parkingPlace);
+    List<ParkingPlace> getAllParkingPlaces (ParkingPlace parkingPlace);
+    ParkingPlace reservationFreePlace (ParkingPlace parkingPlace1);
 
 }

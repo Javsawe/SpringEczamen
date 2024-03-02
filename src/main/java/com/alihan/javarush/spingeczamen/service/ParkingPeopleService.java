@@ -7,11 +7,7 @@ import com.alihan.javarush.spingeczamen.entity.ParkingPlace;
 import java.util.List;
 
 public interface ParkingPeopleService {
-boolean reservationFreePlace (ParkingPlace parkingPlace1);
-List<ParkingPeople> getAll ();
-List<ParkingPeople> getAllFreePlace (ParkingPlace parkingPlace);
+List<ParkingPeople> getAll (ParkingPeople parkingPeople);
 void deleteById (Long id);
-Long numberOfParking (Integer numberOfPlace);
-ParkingPlace liberationReservatingPlace (ParkingPlace parkingPlace2);
-List<ParkingPlace> filterByListFreePlace (ParkingPlace parkingPlace);
+ParkingPeople numberOfParking (Integer numberOfPlace, ParkingPeople parkingPeople);
 }

@@ -1,16 +1,22 @@
 package com.alihan.javarush.spingeczamen.service;
 
 import com.alihan.javarush.spingeczamen.entity.ParkingPlace;
+import springfox.documentation.service.ResponseMessage;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ParkingPlaceService {
-    ParkingPlace createParkingPeople (ParkingPlace parkingPlace);
-    List<ParkingPlace> getParkingPeopleByPlace (ParkingPlace parkingPlace);
-    ParkingPlace updateParkingPeople (ParkingPlace parkingPlace);
-    List<ParkingPlace> allFreePlaces (ParkingPlace parkingPlace);
-    void deleteParkingPeople (ParkingPlace parkingPlace);
-    List<ParkingPlace> getAllParkingPlaces (ParkingPlace parkingPlace);
-    ParkingPlace reservationFreePlace (ParkingPlace parkingPlace1);
+    List<ParkingPlace> initializeParkingSpots(String type2);
+
+    List<ParkingPlace> getAllParkingPlaces();
+    Optional<ParkingPlace> getParkingPlaceById(Long id);
+    ParkingPlace saveParkingPlace(ParkingPlace parkingPlace);
+    void deleteParkingPlace(Long id);
+
+    boolean reserveParkingPlace(int numberParkingPlace);
+    boolean releaseParkingPlace(int numberParkingPlace);
+
+    List<ParkingPlace> filterParkingPlacesByType(String type);
 
 }

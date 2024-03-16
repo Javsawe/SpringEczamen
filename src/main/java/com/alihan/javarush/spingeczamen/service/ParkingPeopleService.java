@@ -5,9 +5,14 @@ import com.alihan.javarush.spingeczamen.entity.ParkingPeople;
 import com.alihan.javarush.spingeczamen.entity.ParkingPlace;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ParkingPeopleService {
-List<ParkingPeople> getAll (ParkingPeople parkingPeople);
-void deleteById (Long id);
-ParkingPeople numberOfParking (Integer numberOfPlace, ParkingPeople parkingPeople);
-}
+        List<ParkingPeople> getAllParkingPeople();
+        List<ParkingPeople> getParkingPeopleById(Long id);
+        ParkingPeople saveParkingPeople(ParkingPeople parkingPeople);
+
+
+    void deleteParkingPeople(Long id);
+    }
+

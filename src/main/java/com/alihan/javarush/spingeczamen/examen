@@ -1,1 +1,1 @@
-https://api.postman.com/collections/32592218-70643992-f605-428c-9329-4315a241cd4f?access_key=PMAT-01HQZS1786Q96STE9W6GS7A8Z9
+https://api.postman.com/collections/32592218-79950bc9-16b7-407b-981f-3850ce797f81?access_key=PMAT-01HS3NE9SER32EY7QGDZ7SYNNT

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/people")
@@ -16,17 +17,23 @@ import java.util.List;
 public class ParkingPeopleController {
     private final ParkingPeopleService parkingPeopleService;
 
-    @PostMapping("/create")
-    public ParkingPeople numberOfParking(Integer numberOfPlace, ParkingPeople parkingPeople) {
-        return parkingPeopleService.numberOfParking(numberOfPlace, parkingPeople);
+    @PostMapping("/createUser")
+    public ParkingPeople saveParkingPeople(ParkingPeople parkingPeople) {
+        return parkingPeopleService.saveParkingPeople(parkingPeople);
     }
 
-    @GetMapping("/get")
-    public List<ParkingPeople> getAll(ParkingPeople parkingPeople) {
-        return parkingPeopleService.getAll(parkingPeople);
+    @GetMapping("/getAllParkingUser")
+    public List<ParkingPeople> getAllParkingPeople() {
+        return parkingPeopleService.getAllParkingPeople();
     }
-    @DeleteMapping("/delete")
-    public void deleteById(Long id) {
-        parkingPeopleService.deleteById(id);
+
+    @DeleteMapping("/deleteParkingUserById")
+    public void deleteParkingPeople(Long id) {
+        parkingPeopleService.deleteParkingPeople(id);
+    }
+
+    @GetMapping("/getParkingUserById")
+    public List<ParkingPeople> getParkingPeopleById(Long id) {
+        return parkingPeopleService.getParkingPeopleById(id);
     }
 }
